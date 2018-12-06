@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Wedding App</title>
+</head>
+
+<body>
+    <nav>
+        <div>
+            <div>
+        
+            </div>
+            <ul>
+                <li><a href="/entry">Add Task</a></li>
+                <li><a href="/schedule">Schedule</a></li>
+                <li><a href="/about">About Us</a></li>
+                <li><a href="/contact">Contact Us</a></li>
+            </ul>
+            {% if not user or not user.is_authenticated %}
+            <ul>
+                <li><a href="/login">Login</a></li>
+            </ul>
+            {% else %}
+            <ul>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </nav>
+
+    {% block content %} {% endblock %}
+
+    <!-- footer -->
+    <footer class="footer"></footer>
+</body>
+
+</html>
