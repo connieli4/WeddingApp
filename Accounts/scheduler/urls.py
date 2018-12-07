@@ -6,7 +6,7 @@ urlpatterns = [
     url(r'^login', views.login, name='chalk_login'),
     url(r'^schedule', views.schedule, name='chalk_schedule'),
     url(r'^entry', views.new_entries, name='chalk_entry'),
-    url(r'^logout', LogoutView, {
+    url(r'^logout', LogoutView.as_view(), {
         'next_page': '/login'
     }),
     url(r'^about', views.about, name='chalk_about'),

@@ -10,5 +10,10 @@ class Activity(models.Model):
     due_date = models.DateField()
     priority = models.IntegerField(default=0)
 
+
     def __str__(self):
         return self.title
+
+class Frees(models.Model):
+    startTime = models.DateTimeField()
+    finishTime = models.DateTimeField()

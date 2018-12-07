@@ -55,7 +55,7 @@ def home(request):
         user.is_active = True
         user.save()
         var = authenticate(username=username, password=password)
-        login(request, var)
+        login(var, request)
         return HttpResponseRedirect(reverse("chalk_schedule"))
     return render(request, 'index.html')
 
